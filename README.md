@@ -449,10 +449,170 @@ Priama adaptácia fuzzy systémov je užitočným nástrojom na automatické nal
 ____
 
 - ## 16. Procyk-Mamdaniho samoorganizačný fuzzy regulátor – štruktúra, postup vyhodnocovania a základné adaptačné pravidlo. Gradientové prístupy adaptácie.
+![Lectures - 2023_Страница_080](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/3b903713-cc35-44c8-a666-428db88d0f84)
+![Lectures - 2023_Страница_081](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/e917f0bc-2c7f-4bcd-9e7d-c2e9a1962025)
+![Lectures - 2023_Страница_082](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/509fa6da-2d09-40ea-91ea-57b820712ea2)
+![Lectures - 2023_Страница_083](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/47776ff6-71c6-43e7-8742-b9c2849a3d08)
+![Lectures - 2023_Страница_084](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/36d0eee6-4a28-4139-bdce-758e3d38e3a4)
+![Lectures - 2023_Страница_085](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/d60140d5-8eda-4c99-ba98-80b1894395e2)
+
+Procyk-Mamdaniho samoorganizačný fuzzy regulátor je typ samo-organizujúceho sa fuzzy regulátora, ktorý sa zameriava na adaptáciu pravidiel a parametrov fuzzy systému pomocou gradientových prístupov. Nasleduje detailný popis štruktúry regulátora, postupu vyhodnocovania a základného adaptačného pravidla.
+
+#### Štruktúra Procyk-Mamdaniho samoorganizačného fuzzy regulátora:
+
+1. Vstupy: Regulátor prijíma vstupy zvonku, ktoré predstavujú aktuálne merania alebo referenčné hodnoty.
+2. Fuzzifikácia: Vstupné hodnoty sa transformujú do množín pomocou funkcií príslušnosti, ktoré sa definujú vopred alebo dynamicky.
+3. Inferenčná báza: Obsahuje pravidlá, ktoré definujú vzťahy medzi vstupnými a výstupnými fuzzy množinami. Každé pravidlo obsahuje antecedent (podmienka) a konzekvent (akcia).
+4. Vyhodnocovanie pravidiel: Na základe aktuálnych hodnôt vstupov sa vyhodnocujú pravidlá a určuje sa stupeň príslušnosti pre každé pravidlo.
+5. Agregácia: Výsledné hodnoty z jednotlivých pravidiel sa agregujú do jednej výstupnej hodnoty.
+6. Defuzzifikácia: Výstupné hodnoty sa transformujú z fuzzy priestoru späť na číselnú hodnotu pomocou metód defuzzifikácie, napríklad centroidu alebo váženého priemeru.
+
+#### Postup vyhodnocovania fuzzy pravidiel v Procyk-Mamdaniho regulátore:
+
+1. **Vyhodnotenie antecedentu**: Hodnoty vstupov sa porovnávajú s funkciou príslušnosti v antecedente každého pravidla. Výsledkom je stupeň príslušnosti pre každé pravidlo.
+2. **Vyhodnotenie konzekventu**: Stupeň príslušnosti sa aplikuje na výstupné akcie v konzekvente pravidiel.
+3. **Agregácia výsledkov**: Výstupné hodnoty z jednotlivých pravidiel sa agregujú pomocou metód ako maximum, minimum, vážený priemer atď.
+4. **Defuzzifikácia**: Výsledné hodnoty sa transformujú späť na číselné hodnoty pomocou metód defuzzifikácie, napríklad centroidu, váženého priemeru alebo najvyššej hodnoty.
+
+#### Adaptačné pravidlo v Procyk-Mamdaniho regulátore:
+Adaptačné pravidlo sa používa na adaptáciu pravidiel fuzzy systému na základe chyby medzi žiadaným a skutočným výstupom. Základným adaptačným pravidlom je:
+
+- Ak chyba sa zmenšuje (negatívna derivácia chyby), potom zvýš hodnoty parametrov pravidla.
+- Ak chyba sa zväčšuje (pozitívna derivácia chyby), potom zníž hodnoty parametrov pravidla.
+
+#### Gradientové prístupy adaptácie v Procyk-Mamdaniho regulátore:
+Gradientové prístupy sa používajú na výpočet zmien parametrov regulátora na základe derivácií a gradientov cieľovej funkcie. Niektoré z týchto prístupov zahŕňajú:
+
+- Gradientný zostup: Využíva sa na minimalizáciu cieľovej funkcie pomocou úpravy parametrov regulátora smerom k negatívnemu gradientu.
+- Metóda najmenších štvorcov: Využíva sa na minimalizáciu kvadratickej chyby medzi požadovaným a skutočným výstupom regulátora. Derivácie tejto chyby sa používajú na výpočet zmien parametrov.
+- Adaptácia Newtonovej metódy: Využíva sa na výpočet zmien parametrov na základe druhej derivácie cieľovej funkcie a jej smeru.
+
+Tieto gradientové prístupy umožňujú efektívne adaptovať pravidlá a parametre Procyk-Mamdaniho samoorganizačného fuzzy regulátora na základe gradientových informácií z chybovej funkcie a jej derivácií.
+
+____
+
 - ## 17. Spôsoby implementácie základného adaptačného pravidla Procyk-Mamdaniho samoorganizačného fuzzy regulátora a porovnanie ich vlastností. Odpratávač odpadkov.
+
+Pri implementácii základného adaptačného pravidla Procyk-Mamdaniho samoorganizačného fuzzy regulátora existujú rôzne spôsoby, ktoré sa líšia vo svojich vlastnostiach a výkone. Tu je niekoľko spôsobov implementácie a porovnanie ich vlastností vo vzťahu k odpratávaču odpadkov.
+
+1. **Metóda učenia založená na chybovej hodnote**:
+- Táto metóda vyhodnocuje chybovú hodnotu medzi požadovaným a skutočným výstupom odpratávača odpadkov.
+- Na základe chyby sa menia váhy a parametre pravidiel v inferenčnej báze.
+- Táto metóda je jednoduchá na implementáciu, ale môže vyžadovať veľa iterácií na dosiahnutie optimálnych výsledkov.
+
+2. **Metóda gradientového zostupu**:
+- Táto metóda využíva gradient cieľovej funkcie (napríklad kvadratickej chyby) na adaptáciu parametrov odpratávača odpadkov.
+- Na základe gradientu sa menia váhy pravidiel a parametrov funkcií príslušnosti.
+- Táto metóda má rýchlu konvergenciu a môže dosiahnuť presnejšie výsledky, ale vyžaduje výpočet gradientu, čo môže byť náročné.
+
+3. **Genetický algoritmus**:
+- Táto metóda využíva evolučné techniky a genetické operátory na adaptáciu pravidiel a parametrov odpratávača odpadkov.
+- Rôzne kombinácie pravidiel a parametrov sú vytvorené, hodnotené pomocou fitness funkcie a evolučne vyberané.
+- Genetický algoritmus môže byť efektívny pre hľadanie globálneho optimálneho riešenia, ale vyžaduje veľké množstvo výpočtov.
+
+#### Porovnanie vlastností týchto spôsobov implementácie:
+
+- Metóda učenia založená na chybovej hodnote je jednoduchá na implementáciu, ale môže trvať dlhšie, kým dosiahne optimálne výsledky.
+- Metóda gradientového zostupu dosahuje rýchlu konvergenciu a presné výsledky, ale vyžaduje výpočet gradientu, čo môže byť náročné na výpočtové prostriedky.
+- Genetický algoritmus je schopný nájsť globálne optimálne riešenie, ale vyžaduje veľa výpočtov a môže mať dlhšiu konvergenciu.
+
+Vo vzťahu k odpratávaču odpadkov by sme mohli použiť metódu gradientového zostupu, pretože potrebujeme presné a rýchle adaptovanie parametrov odpratávača na základe chyby v zbere odpadkov. Táto metóda umožňuje rýchlu a efektívnu adaptáciu parametrov s minimálnym oneskorením pri zbieraní odpadkov a s presnejším výsledkom.
+
+____
+
 - ## 18. Fuzzy relácie – definícia, operácie a prepis znalostí z produkčných pravidiel do fuzzy relácie.
+![Lectures - 2023_Страница_089](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/29a3b82c-6262-440a-80f3-91e708ebd92f)
+![Lectures - 2023_Страница_090](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/27bcdef9-b7ff-4bcf-855a-afea450ed1fd)
+![Lectures - 2023_Страница_092](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/d8cbf125-47b7-42ee-acdf-a90a6ec2c58b)
+![Lectures - 2023_Страница_094](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/82da9a96-12fb-4270-8bef-f288dc0adad9)
+![Lectures - 2023_Страница_095](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/57cf16a7-129c-4121-adc4-a254a465c69d)
+![Lectures - 2023_Страница_096](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/ad771804-1617-44f9-9a96-140a506823fd)
+![Lectures - 2023_Страница_098](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/6dad13b7-fdfc-4999-851b-6cb002262b96)
+![Lectures - 2023_Страница_099](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/37d68520-8c37-4cb0-bb5e-cb8cc67df167)
+![Lectures - 2023_Страница_100](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/ac3318a1-544d-433f-a0b0-cd40c0693b8c)
+
+Fuzzy relácie sú rozšírením konceptu relácie v tradičnej logike na fuzzy logiku. Definícia fuzzy relácie je nasledovná:
+
+Fuzzy relácia R definovaná na univerze X×Y je množina párov (x, y), kde x je prvkovým členom univerza X a y je prvkovým členom univerza Y. Každý prvok (x, y) fuzzy relácie R má príslušnosť μ_R(x, y), ktorá vyjadruje stupeň príslušnosti páru (x, y) k fuzzy relácii R. Stupeň príslušnosti je číslo v intervale [0, 1], pričom hodnota 0 znamená, že pár (x, y) vôbec nepatrí do fuzzy relácie R, a hodnota 1 znamená úplnú príslušnosť páru (x, y) k fuzzy relácii R.
+
+#### Operácie s fuzzy reláciami zahŕňajú:
+
+1. **Prienik (t-norma)**: Prienikom dvoch fuzzy relácií R a S je fuzzy relácia R∩S, ktorá je definovaná ako minimálna hodnota stupeňov príslušnosti prvkov zodpovedajúcich pár (x, y) v oboch fuzzy reláciách R a S.
+
+2. **Zjednotenie (t-konorma)**: Zjednotením dvoch fuzzy relácií R a S je fuzzy relácia R∪S, ktorá je definovaná ako maximálna hodnota stupeňov príslušnosti prvkov zodpovedajúcich pár (x, y) v oboch fuzzy reláciách R a S.
+
+3. **Doplnok**: Doplnok fuzzy relácie R je fuzzy relácia R', kde stupeň príslušnosti páru (x, y) v doplnku R' je definovaný ako 1 mínus stupeň príslušnosti páru (x, y) v fuzzy relácii R.
+
+4. **Projekcia**: Projekciou fuzzy relácie R na univerzum X je fuzzy relácia π_X(R), kde stupeň príslušnosti páru (x, y) v projekcii π_X(R) je rovnaký ako stupeň príslušnosti páru (x, y) v pôvodnej fuzzy relácii R. Podobne, projekciou na univerzum Y je fuzzy relácia π_Y(R).
+
+5. **Cylindrické rozšírenie**: Cylindrické rozšírenie fuzzy relácie R na univerzum X×Z je fuzzy relácia R×Z, kde stupeň príslušnosti páru (x, z) v cylindrickom rozšírení R×Z je rovnaký ako stupeň príslušnosti páru (x, y) v pôvodnej fuzzy relácii R.
+
+6. **Kompozícia**: Kompozíciou dvoch fuzzy relácií R a S dostaneme fuzzy reláciu R∘S, kde stupeň príslušnosti páru (x, z) v kompozícii R∘S je definovaný ako maximálna hodnota zo súčinu stupeňov príslušnosti párov (x, y) v R a (y, z) v S pre všetky y zo spoločného univerza Y.
+
+#### Prepis znalostí z produkčných pravidiel do fuzzy relácie sa uskutočňuje nasledovne:
+
+1. Každé produkčné pravidlo sa transformuje na fuzzy reláciu, pričom premenné z podmienok pravidla sa stávajú prvými členmi fuzzy relácie a premenná z akcie pravidla sa stáva druhým členom fuzzy relácie.
+
+2. Stupeň príslušnosti páru (x, y) vzniknutého fuzzy pravidla vyjadruje, do akej miery sa dané pravidlo aplikuje na daný vstup.
+
+3. Ak je v produkcii viacero pravidiel, fuzzy relácia sa vytvára ako súčet (zjednotenie) jednotlivých fuzzy pravidiel.
+
+Takýmto spôsobom sa môžu znalosti vyjadriť pomocou fuzzy relácií, ktoré umožňujú zachytiť neurčitosť a rozhodovanie na základe príslušnosti.
+
+____
+
 - ## 19. Formy reprezentácie znalostí vo fuzzy systémoch a porovnanie kompozičnej inferencie s inferenciou podľa jednotlivých pravidiel.
+![Lectures - 2023_Страница_106](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/4fd86a08-7763-4b95-9ca4-8c9728650606)
+![Lectures - 2023_Страница_107](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/b602328a-2718-47ec-a05f-3f56fe927372)
+
+Vo fuzzy systémoch existuje niekoľko foriem reprezentácie znalostí, ktoré umožňujú modelovanie neurčitosti a komplexných vzťahov medzi premennými. Medzi tieto formy reprezentácie patrí:
+
+1. **Fuzzy produkčné pravidlá**: Táto forma reprezentácie je najbežnejšia v fuzzy systémoch. Fuzzy produkčné pravidlá kombinujú podmienky (antecedenty) a akcie (konsekventy) pomocou fuzzy logiky. Podmienky a akcie pravidiel sú vyjadrené ako fuzzy množiny s príslušnými funkciami príslušnosti. Tieto pravidlá sa používajú na inferenciu a rozhodovanie v fuzzy systémoch.
+
+2. **Fuzzy relácie**: Fuzzy relácie sa používajú na modelovanie vzťahov medzi premennými. Každý prvok v množine premenných je spojený s inými premennými pomocou fuzzy relácií, kde stupeň príslušnosti určuje silu vzťahu medzi premennými. Fuzzy relácie môžu byť využité na rôzne úlohy, ako je klasifikácia, zoskupovanie alebo odporúčanie.
+
+3. **Fuzzy asociatívne pamäte**: Fuzzy asociatívne pamäte slúžia na hľadanie vzorov alebo asociácií medzi vstupnými a výstupnými premennými. Vstupné vzory sú vyjadrené ako fuzzy množiny a prostredníctvom inferencie sa vyhľadávajú podobné vzory a priradzujú sa príslušné výstupy. Tento typ reprezentácie je často používaný v systémoch na rozpoznávanie vzorov a spracovanie obrazu.
+
+4. **Fuzzy kognitívne mapy**: Fuzzy kognitívne mapy sú grafickým nástrojom na modelovanie a simuláciu vzťahov medzi premennými v kognitívnych procesoch. Premenné sú reprezentované uzlami v grafe a vzťahy medzi nimi sú vyjadrené pomocou fuzzy relácií. Fuzzy kognitívne mapy sú často používané na modelovanie rozhodovacích procesov, učenia a adaptácie v inteligentných systémoch.
+
+Kompozičná inferencia (compositional based inference) a inferencia podľa jednotlivých pravidiel (individual rule based inference) sú dva základné prístupy k inferencii v fuzzy systémoch.
+
+Kompozičná inferencia je založená na kompozícii fuzzy pravidiel a vykonáva sa súčasne pre všetky pravidlá. Vstupné hodnoty sa aplikujú na fuzzy pravidlá a výstupy týchto pravidiel sa zoskupia a kombinujú pomocou operácií t-normy a t-konormy. Tento prístup umožňuje spracovanie viacerých pravidiel naraz a poskytuje celkový výstup fuzzy systému.
+
+Na druhej strane, inferencia podľa jednotlivých pravidiel vykonáva inferenciu postupne pre každé fuzzy pravidlo. Vstupné hodnoty sa aplikujú na jednotlivé pravidlá a výstupy sa zoskupia a kombinujú pomocou operácií t-normy a t-konormy. Tento prístup poskytuje podrobnejšiu kontrolu nad inferenčným procesom, pretože každé pravidlo je vyhodnotené samostatne.
+
+Porovnanie medzi kompozičnou inferenciou a inferenciou podľa jednotlivých pravidiel závisí od konkrétnej aplikácie a jej požiadaviek. **Kompozičná inferencia je všeobecne efektívnejšia pre spracovanie veľkého počtu pravidiel naraz a umožňuje paralelné spracovanie. Na druhej strane, inferencia podľa jednotlivých pravidiel poskytuje väčšiu flexibilitu a presnosť pri riadení inferenčného procesu.**
+
+____
+
 - ## 20. Fuzzy kognitívne mapy – definícia, spôsob činnosti, manuálny návrh.
+![Lectures - 2023_Страница_124](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/c50d24a6-9326-4354-a0c6-1d5e0c95f4df)
+![Lectures - 2023_Страница_125](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/d8819d09-0391-4cff-837a-70bee4343c0c)
+![Lectures - 2023_Страница_126](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/1abb3d2f-10c0-4f88-947b-7df502d84127)
+![Lectures - 2023_Страница_127](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/b1f8aac1-ee59-43ec-9117-29233d94b7e6)
+
+Fuzzy kognitívne mapy (FKM) sú nástrojom na modelovanie a simuláciu vzťahov medzi premennými v kognitívnych procesoch. FKM sú založené na teórii fuzzy množín a kognitívnych mapách a slúžia na reprezentáciu a analýzu komplexných systémov, ktoré zahŕňajú rozhodovanie, učenie a adaptáciu.
+
+FKM sa skladajú z množiny uzlov a vzťahov medzi nimi. Každý uzol predstavuje premennú a je spojený s inými uzlami prostredníctvom váhovaných hrán. Tieto hrany reprezentujú vzájomné interakcie a vzťahy medzi premennými. Stupeň príslušnosti sa používa na vyjadrenie sily vzťahu medzi uzlami.
+
+Spôsob činnosti FKM je založený na iteratívnom procese aktualizácie stavu uzlov. Počiatočné hodnoty uzlov sú definované na začiatku a potom sa vykonávajú opakované kroky aktualizácie. Každý krok spočíva vo vyhodnotení pravidiel a aktualizácii hodnôt uzlov na základe váh a pravidiel.
+
+#### Manuálny návrh FKM zahŕňa niekoľko krokov:
+
+1. **Identifikácia premenných**: Na začiatku je potrebné identifikovať premenné, ktoré ovplyvňujú daný systém. Tieto premenné môžu byť vstupné, výstupné alebo vnútorné premenné.
+
+2. **Definícia vzťahov**: Pre každú premennú sa definujú vzťahy a interakcie s inými premennými. Tieto vzťahy sa vyjadrujú pomocou váhovaných hrán medzi uzlami.
+
+3. **Stanovenie pravidiel**: Na základe doménovej znalosti sa stanovujú pravidlá, ktoré určujú, ako sa menia hodnoty uzlov na základe vzťahov a interakcií medzi premennými. Pravidlá sa vyjadrujú vo forme "ak- potom" štruktúry a môžu byť vyjadrené pomocou fuzzy logiky.
+
+4. **Stanovenie počiatočných hodnôt**: Počiatočné hodnoty uzlov sa stanovujú na začiatku simulácie. Tieto hodnoty môžu byť získané z experimentálnych dát alebo na základe odborných znalostí.
+
+5. **Aktualizácia hodnôt uzlov**: Vykonáva sa opakovaná aktualizácia hodnôt uzlov na základe pravidiel a váhovaných hrán. Tento proces pokračuje až do dosiahnutia stabilného stavu alebo zastavenia podľa definovaných kritérií.
+
+Manuálny návrh FKM vyžaduje doménovú znalosť a skúsenosti s daným systémom. Je potrebné starostlivo vybrať a definovať vzťahy medzi premennými, stanoviť správne pravidlá a inicializovať počiatočné hodnoty uzlov. Správne navrhnutý FKM môže poskytnúť hodnotné informácie o vzťahoch medzi premennými a pomôcť pri analýze a rozhodovaní v komplexných systémoch.
+
+____
+
 - ## 21. Spôsoby implementácie fuzzy kognitívnych máp a manuálny postup návrhu.
 - ## 22. Implikátory, ich vzťah k vlastnej inferencii a základné typy implikátorov.
 - ## 23. Metódy modus ponens a modus tollens a ich všeobecná forma.
