@@ -629,3 +629,21 @@ ____
 ![Lectures - 2023_Страница_191](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/948e1a24-76d0-4be8-b278-9c8151f2afeb)
 ![Lectures - 2023_Страница_192](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/2f561f46-b5d7-473e-a94e-762604246cf0)
 ![Lectures - 2023_Страница_193](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/099bf463-ae91-48f3-94eb-bcb94a776f8e)
+
+Metódy k-means a fuzzy c-means sú dve bežne používané metódy zhlukovania (clustering) v analýze dát. Obe metódy slúžia na rozdelenie dátových bodov do skupín alebo zhlukov na základe ich podobnosti. Hlavným cieľom je minimalizovať vzdialenosť medzi bodmi vo vnútri zhlukov a maximalizovať vzdialenosť medzi bodmi z rôznych zhlukov.
+
+Metóda k-means je jednoduchá a populárna metóda zhlukovania. Je založená na nájdení pevného počtu k zhlukov v dátach. Postupne sa vyberú k náhodným bodom ako stredové body zhlukov a potom sa opakovane vykonávajú dva kroky: priradenie dátových bodov ku najbližším stredovým bodom a aktualizácia stredových bodov na základe priemeru priradených bodov. Tento proces sa opakuje, kým sa nedosiahne konvergencia. Metóda k-means je rýchla a efektívna, ale vyžaduje pevný počet zhlukov a vykazuje citlivosť na počiatočné výber stredových bodov.
+
+Na druhej strane, fuzzy c-means (FCM) je rozšírenie metódy k-means s využitím fuzzy logiky. FCM priradzuje dátové body ku každému zhluku s určitou príslušnosťou (degree of membership) v rozmedzí od 0 do 1. Každý bod môže byť súčasťou viacerých zhlukov s rôznou príslušnosťou. FCM používa váhovaný priemer na aktualizáciu stredových bodov a výpočet príslušnosti bodov v každom kroku. Tento proces sa opakuje, kým sa nedosiahne konvergencia. FCM umožňuje mäkšie priradenie bodov do zhlukov a je robustnejší voči počiatočným podmienkam.
+
+#### Porovnanie medzi metódou k-means a fuzzy c-means závisí od konkrétnej aplikácie a jej požiadaviek:
+
+- **Interpretovateľnosť**: Metóda k-means poskytuje jasnú príslušnosť bodov k jednotlivým zhlukom, kdežto FCM umožňuje príslušnosť bodov ku viacerým zhlukom s rôznou intenzitou.
+
+- **Citlivosť na výstupné hodnoty**: K-means je citlivejší na extrémne hodnoty v dátach, pretože sa snaží minimalizovať kvadratické chyby. FCM je menej citlivý na extrémy vďaka použitiu váhov a príslušností v rozmedzí od 0 do 1.
+
+- **Flexibilita**: FCM poskytuje väčšiu flexibilitu v priradzovaní bodov ku zhlukom vďaka príslušnosti v rozmedzí. Toto je výhodné, ak existuje neistota alebo prekryv medzi zhlukmi.
+
+- **Robustnosť voči počiatočným podmienkam**: FCM je menej citlivý na počiatočný výber stredových bodov a poskytuje stabilnejšie výsledky než k-means.
+
+V závere, voľba medzi metódou k-means a fuzzy c-means závisí od konkrétnej úlohy a preferencií. Ak chcete tvrdo priradiť body k jednotlivým zhlukom a neexistuje veľká neistota v dátach, metóda k-means môže byť vhodná. Ak však chcete mäkšie priradenie bodov a zohľadnenie neistoty, FCM môže poskytnúť lepšie výsledky.
