@@ -614,15 +614,173 @@ Manuálny návrh FKM vyžaduje doménovú znalosť a skúsenosti s daným systé
 ____
 
 - ## 21. Spôsoby implementácie fuzzy kognitívnych máp a manuálny postup návrhu.
+Fuzzy kognitívne mapy (FKM) sú nástrojom pre modelovanie a analýzu vzťahov medzi premennými alebo konceptmi v rámci komplexných systémov.
+#### Spôsoby implementácie fuzzy kognitívnych máp
+![Lectures - 2023_Страница_130](https://github.com/girgibon/fuzzy-logic/assets/93397589/440d5867-dad4-4e92-8711-f5fa331916dd)
+![Lectures - 2023_Страница_131](https://github.com/girgibon/fuzzy-logic/assets/93397589/a6a1850d-0ea1-43ae-803d-e4770ecde02e)
+#### Manuálny postup návrhu
+![Lectures - 2023_Страница_132](https://github.com/girgibon/fuzzy-logic/assets/93397589/e6f990e5-7175-42e2-b1be-26ce750d7eb7)
+
+____
+
 - ## 22. Implikátory, ich vzťah k vlastnej inferencii a základné typy implikátorov.
+![Lectures - 2023_Страница_137](https://github.com/girgibon/fuzzy-logic/assets/93397589/43aa7ef2-0721-4a8d-a54a-045dab7ba349)
+![Lectures - 2023_Страница_138](https://github.com/girgibon/fuzzy-logic/assets/93397589/98d45c38-45d6-4e40-b6ca-7a08f93fdc6c)
+![Lectures - 2023_Страница_139](https://github.com/girgibon/fuzzy-logic/assets/93397589/21d75d50-492c-4649-860b-0d42037243e1)
+#### Implikátory
+Implikátory sú logické operátory, ktoré sa používajú na vyjadrenie implikácie alebo odvodzovacieho pravidla medzi dvoma výrokmi. Určujú, ako je jedno tvrdenie spojené s druhým a aký je vzťah medzi nimi.
+
+Vzťah implikácie sa často vyjadruje pomocou vety "ak...potom". Implikátory majú dôležitú úlohu v matematickej logike, formálnych jazykoch, programovaní a automatizovanom odvodzovaní.
+#### Vzťah k vlastnej inferencii
+Vlastná inferencia je schopnosť implikátora inferovať (odvodiť) nový výrok alebo tvrdenie na základe existujúcich výrokov. Ak implikátor disponuje vlastnou inferenciou, znamená to, že z pravdivosti vstupných výrokov je možné vyvodiť pravdivosť výstupného výroku.
+#### Základné typy implikátorov.
+![Lectures - 2023_Страница_140](https://github.com/girgibon/fuzzy-logic/assets/93397589/22d61d59-0b6a-4f0c-9a1c-2da4c018ee33)
+![Lectures - 2023_Страница_141](https://github.com/girgibon/fuzzy-logic/assets/93397589/05817b25-bde7-48e1-af7b-6c9c01c92c8a)
+
+____
+
 - ## 23. Metódy modus ponens a modus tollens a ich všeobecná forma.
+#### Modus ponens
+![Lectures - 2023_Страница_142](https://github.com/girgibon/fuzzy-logic/assets/93397589/36cb2a58-19d3-41ab-bf77-19b378f7411a)
+![Lectures - 2023_Страница_142](https://github.com/girgibon/fuzzy-logic/assets/93397589/a3cd5456-79d8-4ec1-9f76-3712fdd801d3)
+![Lectures - 2023_Страница_143](https://github.com/girgibon/fuzzy-logic/assets/93397589/f7dc1af2-06a0-4dcd-a183-a8c60b7566bb)
+![Lectures - 2023_Страница_144](https://github.com/girgibon/fuzzy-logic/assets/93397589/71bd4223-a2e1-4a07-83f9-d70ee3f0c2c5)
+Modus ponens je princíp logického odvodzovania, ktorý umožňuje odvodiť nový výrok na základe predchádzajúceho výroku a jeho implikácie (podmienky). Tento princíp je založený na nasledujúcej štruktúre:
+Ak platí "Ak A, potom B" a platí A, potom platí B.
+#### Modus tollens
+![Lectures - 2023_Страница_145](https://github.com/girgibon/fuzzy-logic/assets/93397589/209cce4a-fa0d-4729-80fb-a7005a1fae31)
+![Lectures - 2023_Страница_146](https://github.com/girgibon/fuzzy-logic/assets/93397589/2e85dd71-52b4-4ac7-9323-184a56f2f741)
+![Lectures - 2023_Страница_147](https://github.com/girgibon/fuzzy-logic/assets/93397589/b36deb35-a66a-4765-a869-44f8492550c1)
+
+Modus tollens je princíp logického odvodzovania, ktorý umožňuje odvodiť negáciu predchádzajúceho výroku na základe jeho implikácie (podmienky) a negácie dôsledku. Tento princíp je založený na nasledujúcej štruktúre:
+Ak platí "Ak A, potom B" a platí negácia B, potom platí negácia A.
+
+____
+
 - ## 24. Relácie podobnosti a metóda piatich najbližších susedov.
+#### Relácie podobnosti
+![Lectures - 2023_Страница_148](https://github.com/girgibon/fuzzy-logic/assets/93397589/0fdb31ef-bb52-4b7d-9b6a-81a2aa9bf0c7)
+![Lectures - 2023_Страница_149](https://github.com/girgibon/fuzzy-logic/assets/93397589/5fa08a76-6068-4a6d-9c35-75ded2a0345b)
+![Lectures - 2023_Страница_150](https://github.com/girgibon/fuzzy-logic/assets/93397589/d02c5e33-b4c7-4960-b63b-bfa635ec0861)
+![Lectures - 2023_Страница_151](https://github.com/girgibon/fuzzy-logic/assets/93397589/208b3978-99e3-4f40-9c5c-19e0f3c9278a)
+
+Relácie podobnosti sú nástrojom na vyjadrenie podobnosti medzi objektmi alebo dátami. V rôznych oblastiach, ako je strojové učenie, rozpoznávanie vzorov, spracovanie obrazu a textové analýzy, sa používajú rôzne metriky podobnosti na meranie a vyhodnocovanie podobnosti.
+#### Metóda piatich najbližších susedov
+![Lectures - 2023_Страница_152](https://github.com/girgibon/fuzzy-logic/assets/93397589/0ba9e074-a4da-4c6c-948e-882f37e9b9ca)
+![Lectures - 2023_Страница_153](https://github.com/girgibon/fuzzy-logic/assets/93397589/525e50b7-c8a4-4ded-8d42-009e21c5a4d5)
+![Lectures - 2023_Страница_154](https://github.com/girgibon/fuzzy-logic/assets/93397589/41c90eb7-c76f-4e13-9663-393c9853f228)
+
+Metóda piatich najbližších susedov (k-nn) je jednou z najjednoduchších a najpoužívanejších metód na základe relácií podobnosti. Táto metóda sa často používa na klasifikáciu alebo regresiu dát.
+
+Princíp metódy piatich najbližších susedov spočíva v tom, že pre daný vstupný vzor sa vyhľadá k najbližších susedov z trénovacej sady na základe nejakej metriky podobnosti, napríklad Euklidovskej vzdialenosti. Následne sa zohľadňujú triedy alebo hodnoty týchto najbližších susedov na rozhodnutie o triede alebo hodnote vstupného vzoru.
+
+#### Postup metódy piatich najbližších susedov je nasledovný:
+- Vstupnému vzoru sa vyhľadajú k najbližších susedov z trénovacej sady na základe zvolenej metriky podobnosti.
+
+- Pre každého z týchto najbližších susedov sa zistí trieda (pre klasifikáciu) alebo hodnota (pre regresiu).
+
+- Na základe tried alebo hodnôt týchto najbližších susedov sa rozhodne o triede alebo hodnote vstupného vzoru. Napríklad, v prípade klasifikácie môže sa použiť hlasovanie väčšiny, kde trieda s najväčším počtom najbližších susedov je priradená k vstupnému vzoru.
+____
+
 - ## 25. Hranové operátory – použitie, základné typy hranových operácií.
+![Lectures - 2023_Страница_155](https://github.com/girgibon/fuzzy-logic/assets/93397589/c2c9df51-4d68-41a1-a4ac-401530e3cdf0)
+#### Hranové operátory
+Hranové operátory sú matematické operácie, ktoré sa používajú na detekciu hrán v obraze alebo signáli. Sú založené na zmenách intenzity alebo hodnoty signálu v okolí pixelov alebo bodov v obraze. 
+#### Použitie
+Hranové operátory sa používajú v rôznych oblastiach, ako je spracovanie obrazu, analýza obrazu, počítačové videnie a spracovanie signálov.
+#### Základné typy hranových operácií.
+![Lectures - 2023_Страница_156](https://github.com/girgibon/fuzzy-logic/assets/93397589/e8ed9cbd-d757-4bef-aa5b-84ffceaf943e)
+![Lectures - 2023_Страница_157](https://github.com/girgibon/fuzzy-logic/assets/93397589/5fe863ae-56ed-432f-88d6-b1a370eaa61b)
+#### Typy modifikačných funkcií $`f_H`$:
+![Lectures - 2023_Страница_158](https://github.com/girgibon/fuzzy-logic/assets/93397589/bf83bec3-84aa-4c8d-b35a-ac768b1663f6)
+![Lectures - 2023_Страница_159](https://github.com/girgibon/fuzzy-logic/assets/93397589/d89eaefd-8a90-4f8c-854d-365d83cff916)
+
+____
+
 - ## 26. Systémy pravdivostných hodnôt – Baldwinov systém.
+![Lectures - 2023_Страница_178](https://github.com/girgibon/fuzzy-logic/assets/93397589/db90d5b1-7d8c-41c0-9bda-a89fe5c6a2ca)
+![Lectures - 2023_Страница_179](https://github.com/girgibon/fuzzy-logic/assets/93397589/948c044a-32ab-4a6a-97db-6d6e0f28b8c1)
+#### Systémy pravdivostných hodnôt
+Systémy pravdivostných hodnôt (SPH) sú logické formálne systémy, ktoré sa zaoberajú pravdivosťou výrokových formúlí. Jedným z takýchto systémov je Baldwinov systém, ktorý bol vyvinutý anglickým logikom Johnom W. Baldwinom.
+![Lectures - 2023_Страница_180](https://github.com/girgibon/fuzzy-logic/assets/93397589/14e5ebb1-eb27-4745-a567-74be41ce14ec)
+![Lectures - 2023_Страница_181](https://github.com/girgibon/fuzzy-logic/assets/93397589/9f6c0b2a-a077-48d4-a9df-0713512fa347)
+![Lectures - 2023_Страница_182](https://github.com/girgibon/fuzzy-logic/assets/93397589/35b03025-6f75-4600-b420-62ea9c4791bd)
+#### Baldwinov systém
+Baldwinov systém je axiomatický formálny systém, ktorý poskytuje pravidlá na odvodenie pravdivostných hodnôt výrokových formúlí. Systém je založený na logických operáciách ako konjunkcia, disjunkcia, negácia a implikácia. Systém definuje axiómy a odvodzovacie pravidlá, ktoré umožňujú postupne odvodiť pravdivostné hodnoty výrokových formúlí.
+
+Baldwinov systém má niekoľko vlastností, medzi ktoré patria:
+- **Kombinácia logických operácií:** Baldwinov systém umožňuje kombináciu rôznych logických operácií na tvorbu výrokových formúlí. Tieto operácie môžu byť aplikované na výrokové premenné, konkrétne výroky alebo kombinácie výrokových formúlí.
+- **Axiómy a odvodzovacie pravidlá:** Systém definuje základné axiómy, ktoré sú východiskom pre odvodenie pravdivostných hodnôt výrokových formúlí. Okrem axiómov systém poskytuje aj odvodzovacie pravidlá, ktoré sa používajú na postupné odvodenie pravdivostných hodnôt.
+- **Pravidlá inferencie:** Baldwinov systém poskytuje pravidlá inferencie, ktoré umožňujú vyvodzovanie pravdivostných hodnôt výrokových formúlí na základe existujúcich pravdivostných hodnôt a logických operácií.
+
+____
+
 - ## 27. Multidimenzionálne uvažovanie – prehľad. Mizumotov prístup.
+![Lectures - 2023_Страница_160](https://github.com/girgibon/fuzzy-logic/assets/93397589/eae6cae1-1d73-4437-a864-621dbda3e82a)
+![Lectures - 2023_Страница_161](https://github.com/girgibon/fuzzy-logic/assets/93397589/86b128c7-0d19-461f-978f-a8933ddb42db)
+#### Prehľad
+Multidimenzionálne uvažovanie je prístup v analýze dát, ktorý sa zameriava na manipuláciu a vizualizáciu dát v priestore s viacerými dimenziami. V tradičnom prístupe sa často pracuje s dátami v dvojrozmerných tabuľkách, čo môže obmedzovať schopnosť odhaliť zložité vzťahy a štruktúry v dátach. Multidimenzionálne uvažovanie sa snaží prekonať tieto obmedzenia a poskytuje lepšiu predstavu o vzťahoch medzi viacerými premennými.
+![Lectures - 2023_Страница_162](https://github.com/girgibon/fuzzy-logic/assets/93397589/2809c0fd-4276-42c5-a3e8-4c34373f5db2)
+![Lectures - 2023_Страница_163](https://github.com/girgibon/fuzzy-logic/assets/93397589/cfc16ad5-b44c-4479-8a15-46468d3e18bc)
+![Lectures - 2023_Страница_164](https://github.com/girgibon/fuzzy-logic/assets/93397589/daed3dd1-65f2-444d-9dbf-3430e5828fcf)
+#### Mizumotov prístup
+V rámci multidimenzionálneho uvažovania existuje viacero prístupov a metód. Jedným z týchto prístupov je Mizumotov prístup, ktorý je založený na princípe "Stromového zobrazenia" (Tree Map). Mizumotov prístup kombinuje hierarchickú štruktúru dát s vizuálnou reprezentáciou, čo umožňuje zobraziť a analyzovať viacero dimenzií dát naraz.
+
+____
+
 - ## 28. Zhluková analýza – definícia a využitie.
+![Lectures - 2023_Страница_187](https://github.com/girgibon/fuzzy-logic/assets/93397589/2f168b65-1b80-46bb-bc73-9cd900baaa7f)
+![Lectures - 2023_Страница_188](https://github.com/girgibon/fuzzy-logic/assets/93397589/c5834375-ab60-48d0-85da-65186735b961)
+![Lectures - 2023_Страница_189](https://github.com/girgibon/fuzzy-logic/assets/93397589/cf1af9aa-1910-46ce-a4b1-19417856d2e7)
+#### Definícia
+Zhluková analýza je metóda v analýze dát, ktorá sa používa na identifikáciu skupín podobných objektov v dátach. Cieľom zhlukovej analýzy je zoskupiť objekty do zhlukov tak, aby objekty v rámci jedného zhluku boli si podobnejšie ako objekty v iných zhlukoch. Táto analýza je často vykonávaná bez prítomnosti preddefinovaných tried alebo kategórií a je založená na podobnosti medzi objektmi.
+#### Využitie zhlukovej analýzy je rozmanité a nachádza sa v rôznych odvetviach:
+- **Segmentácia trhu:** Zhluková analýza sa používa na segmentáciu zákazníkov na základe ich podobností v správaní, preferenciách alebo demografických údajoch. To umožňuje cieľenejšie zacieliť marketingové kampane a ponúkať prispôsobené produkty a služby pre každý segment.
+- **Biomedicína:** V medicíne a biomedicíne sa zhluková analýza používa na klasifikáciu a skupinovanie genetických profilov, diagnostických obrazov alebo klinických údajov. To môže viesť k identifikácii vzorov alebo skupín chorôb a podporiť vývoj personalizovanej medicíny.
+- **Prieskum dát:** V oblasti prieskumu dát je zhluková analýza dôležitým nástrojom pre objavovanie vzorov, štruktúr a skupín v rozsiahlych dátových súboroch. Pomáha v identifikácii vzťahov a vytváraní hypotéz, ktoré môžu byť neskôr testované.
+- **Obchodná analýza:** Pri analýze predaja, spotrebiteľského správania alebo logistických dát sa zhluková analýza používa na identifikáciu skupín podobných výrobkov, spotrebiteľských skupín alebo distribučných vzorov. Tieto informácie môžu byť využité na optimalizáciu skladových zásob, zlepšenie predaja alebo personalizované odporúčania pre zákazníkov.
+- **Astronómia a geoinformatika:** V týchto oblastiach sa zhluková analýza využíva na identifikáciu galaxií, hviezdnych zhlukov, priestorových vzorov alebo klasifikáciu geografických údajov.
+
+____
+
 - ## 29. Miery neurčitosti fuzzy množín – definícia, vlastnosti a základné typy.
+![Lectures - 2023_Страница_195](https://github.com/girgibon/fuzzy-logic/assets/93397589/2855233a-ae7f-43d2-a45c-87ae3c61d8e2)
+![Lectures - 2023_Страница_196](https://github.com/girgibon/fuzzy-logic/assets/93397589/e787a346-f180-485f-a3f4-f2994d6296ce)
+Miera neurčitosti je mierou, ktorá vyjadruje stupeň nejasnosti alebo neurčitosti príslušnosti prvkov do fuzzy množiny.
+![Lectures - 2023_Страница_197](https://github.com/girgibon/fuzzy-logic/assets/93397589/fbd0d5bb-b28b-415e-84ef-2ee3509401b0)
+![Lectures - 2023_Страница_198](https://github.com/girgibon/fuzzy-logic/assets/93397589/b6e020fe-3d73-4818-8f95-85241b1fe828)
+Existuje niekoľko rôznych miar neurčitosti, ktoré sa používajú na kvantifikáciu tejto neurčitosti. 
+#### Tu sú niektoré základné miery neurčitosti:
+- **Entropia:** Entropia je mierou neurčitosti, ktorá sa vypočíta ako suma súčinov pravdepodobností príslušnosti a logaritmických hodnôt príslušnosti. Vyššia hodnota entropie znamená vyššiu neurčitosť. Entropia je často používaná pri fuzzy množinách typu 1.
+- **Variabilita:** Variabilita je mierou neurčitosti, ktorá vyjadruje rozptyl príslušnosti v rámci fuzzy množiny. Vyššia hodnota variability indikuje vyššiu neurčitosť. Variabilita sa používa často pri fuzzy množinách typu 2.
+- **Index neurčitosti:** Index neurčitosti je mierou neurčitosti, ktorý vyjadruje pomer neurčitosti množiny k jej maximálnej neurčitosti. Hodnota indexu neurčitosti sa pohybuje od 0 do 1, pričom hodnota 0 znamená úplnú neurčitosť a hodnota 1 znamená úplnú určitosť.
+- **Šírka a výška funkcie príslušnosti:** Tieto vlastnosti súvisia s tvarom funkcie príslušnosti fuzzy množiny. Vyššia šírka a nižšia výška značia vyššiu neurčitosť.
+#### Vlastnosti miery neurčitosti:
+- **Monotonnosť:** Miera neurčitosti by mala byť monotonná s narastajúcou neurčitosťou fuzzy množiny.
+- **Normalizácia:** Miera neurčitosti by mala byť normalizovaná do určitého rozsahu, napríklad od 0 do 1.
+- **Invariancia voči transformáciám:** Miera neurčitosti by mala byť invariantná voči transformáciám fuzzy množiny, čiže by sa nemala meniť pri zmene mier príslušnosti.
+
+Základné typy miery neurčitosti sa môžu líšiť v spôsobe výpočtu a vlastnostiach. Je dôležité vybrať si vhodnú mieru neurčitosti v závislosti od typu fuzzy množiny a konkrétneho problému, s ktorým sa pracuje.
+![Lectures - 2023_Страница_199](https://github.com/girgibon/fuzzy-logic/assets/93397589/ecca61a2-8d95-4d09-a398-1565239191e8)
+![Lectures - 2023_Страница_200](https://github.com/girgibon/fuzzy-logic/assets/93397589/49ac5ef6-ed38-4d02-ac6e-57b14bfbb75f)
+![Lectures - 2023_Страница_201](https://github.com/girgibon/fuzzy-logic/assets/93397589/60da53c2-dbd3-4ca4-8cbe-b33cb981e211)
+![Lectures - 2023_Страница_202](https://github.com/girgibon/fuzzy-logic/assets/93397589/0066975d-579a-4587-95e4-2bed296403ea)
+
+____
+
 - ## 30. Fuzzy množiny typu 2 – definícia a využitie v regulácii.
+![Lectures - 2023_Страница_203](https://github.com/girgibon/fuzzy-logic/assets/93397589/a0f38372-535c-4d7e-ac6a-28b5bb4752b7)
+![Lectures - 2023_Страница_204](https://github.com/girgibon/fuzzy-logic/assets/93397589/36f65df4-7525-40e5-82e5-11042d3b4edc)
+![Lectures - 2023_Страница_205](https://github.com/girgibon/fuzzy-logic/assets/93397589/c2c8aaa3-5157-42c1-8f71-0b1750bac94e)
+![Lectures - 2023_Страница_206](https://github.com/girgibon/fuzzy-logic/assets/93397589/78b5e5cb-cafb-4139-b9d6-d4c0b4518864)
+#### Definícia
+Fuzzy množiny typu 2 sú rozšírením klasických fuzzy množín typu 1 a umožňujú zohľadňovať neistotu nielen v príslušnosti prvkov do množiny, ale aj v hodnote príslušnosti. Tieto množiny sú definované pomocou funkcií príslušnosti, ktoré sú množinami funkcií príslušnosti typu 1.
+#### Využitie v regulácii
+Pre využitie fuzzy množín typu 2 v regulácii je potrebné implementovať algoritmy a metódy, ktoré sú schopné pracovať s týmito rozšírenými množinami. Jedným z takýchto algoritmov je napríklad adaptívna inferencia, ktorá dokáže efektívne kombinovať informáciu z rôznych zdrojov a adaptovať sa na meniace sa podmienky. Tento typ regulácie je vhodný pre systémy s vysokou neistotou a nestabilitou.
+![Lectures - 2023_Страница_207](https://github.com/girgibon/fuzzy-logic/assets/93397589/efa5e73a-17a0-4f55-b185-aca69c8805ab)
+
+____
+
 - ## 31. Metódy k-means, fuzzy c-means a ich porovnanie.
 ![Lectures - 2023_Страница_194](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/3f4083b6-0e5a-4c82-a827-5e9f1077ff9d)
 ![Lectures - 2023_Страница_190](https://github.com/CoolmixZero/fuzzy-logic/assets/107999456/9bbf49e6-081f-4342-9b32-9129d86853c1)
