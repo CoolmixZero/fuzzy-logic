@@ -621,6 +621,32 @@ Fuzzy kognitívne mapy (FKM) sú nástrojom pre modelovanie a analýzu vzťahov 
 #### Manuálny postup návrhu
 ![Lectures - 2023_Страница_132](https://github.com/girgibon/fuzzy-logic/assets/93397589/e6f990e5-7175-42e2-b1be-26ce750d7eb7)
 
+Existuje niekoľko spôsobov implementácie fuzzy kognitívnych máp (FKM) a manuálny postup ich návrhu. Tu je stručný prehľad týchto spôsobov:
+
+1. **Implementácia pomocou programovacieho jazyka**: FKM môžete implementovať pomocou programovacieho jazyka, ako je napríklad Python, MATLAB, Java atď. V tejto implementácii musíte definovať vstupné premenné, vzťahy medzi premennými a pravidlá inferencie. Následne môžete vykonávať simulácie a analýzy na základe vytvorenej FKM.
+
+2. **Využitie existujúcich nástrojov**: Existuje niekoľko softvérových nástrojov, ktoré umožňujú jednoduchú implementáciu FKM. Tieto nástroje poskytujú grafické rozhranie, kde môžete definovať premenné, vzťahy a pravidlá, a potom vykonávať simulácie a analýzy. Medzi populárne nástroje patrí napríklad MATLAB Fuzzy Logic Toolbox, FuzzyTECH a FuzzyCLIPS.
+
+3. **Využitie softvéru pre modelovanie a simuláciu**: Niektoré softvéry pre modelovanie a simuláciu, ako je napríklad Simulink, umožňujú implementáciu FKM. V týchto softvéroch môžete vytvárať grafické modely FKM a definovať vstupy, vzťahy a pravidlá. Potom môžete vykonávať simulácie a analyzovať výsledky.
+
+Manuálny postup návrhu FKM sa zvyčajne skladá z nasledujúcich krokov:
+
+1. **Identifikácia premenných**: Vyberte relevantné premenné, ktoré budete zohľadňovať vo vašej FKM. Tieto premenné by mali byť dôležité pre konkrétnu úlohu alebo systém, ktorý chcete modelovať.
+
+2. **Definícia vzťahov**: Identifikujte vzťahy medzi premennými a popíšte ich. Tieto vzťahy môžu byť kvantitatívne alebo kvalitatívne a môžu byť založené na doménovej znalosti alebo experimentálnych údajoch.
+
+3. **Vytvorenie pravidiel**: Na základe identifikovaných vzťahov vytvorte súbor fuzzy pravidiel. Tieto pravidlá by mali popisovať, ako sa menia premenné v závislosti od zmien iných premenných.
+
+4. **Voľba funkcií príslušnosti**: Pre každú premennú vyberte vhodnú funkciu príslušnosti, ktorá bude popisovať jej hodnoty v rozličných stavoch. Tieto funkcie príslušnosti môžu byť napríklad trojuholníkové, trapezové, gaussiány alebo iné.
+
+5. **Priradenie hodnôt**: Priradte konkrétne hodnoty jednotlivým premenným a funkciám príslušnosti na základe poznatkov o systéme alebo experimentálnych údajoch. Tieto hodnoty určujú tvar a rozsah jednotlivých funkcií príslušnosti.
+
+6. **Testovanie a ladenie**: Testujte a ladenie FKM na základe vstupných hodnôt a očakávaných výstupov. Porovnajte výsledky so skutočnými údajmi alebo očakávanými výsledkami a prispôsobte potrebné parametre alebo pravidlá.
+
+Tieto kroky by mali byť iteratívne a opakujúce sa, kým nie je dosiahnutá požadovaná presnosť a správnosť FKM.
+
+Je dôležité zdôrazniť, že návrh FKM je časovo náročný proces, ktorý vyžaduje doménové znalosti, experimentálnu analýzu a testovanie.
+
 ____
 
 - ## 22. Implikátory, ich vzťah k vlastnej inferencii a základné typy implikátorov.
@@ -636,6 +662,22 @@ Vlastná inferencia je schopnosť implikátora inferovať (odvodiť) nový výro
 #### Základné typy implikátorov.
 ![Lectures - 2023_Страница_140](https://github.com/girgibon/fuzzy-logic/assets/93397589/22d61d59-0b6a-4f0c-9a1c-2da4c018ee33)
 ![Lectures - 2023_Страница_141](https://github.com/girgibon/fuzzy-logic/assets/93397589/05817b25-bde7-48e1-af7b-6c9c01c92c8a)
+
+Implikátory sú dôležitou súčasťou fuzzy logiky a majú kľúčovú úlohu v inferenčnom procese. Sú to binárne operátory, ktoré umožňujú vyjadriť vzťah medzi podmienkami (antecedentmi) a závermi (konsekventmi) fuzzy pravidiel. Ich úlohou je vyjadriť silu implikácie alebo možné spojenie medzi hodnotami príslušnosti premenných.
+
+Implikátory sú tesne spojené s vlastnou inferenciou v fuzzy logike. Vlastná inferencia je proces, ktorý určuje hodnoty príslušnosti záverov na základe hodnôt príslušnosti podmienok a implikátorov. Tento proces je realizovaný pomocou matematických vzťahov a pravidiel, ktoré sa aplikujú na výpočet nových hodnôt príslušnosti.
+
+Existuje niekoľko základných typov implikátorov, ktoré sa používajú v fuzzy logike:
+
+1. **Množinový implikátor (Zadehov implikátor)**: Je to najjednoduchší a najčastejšie používaný typ implikátora. Jeho vzťah medzi hodnotami príslušnosti podmienky a záveru je definovaný pomocou klasického logického implikátora. Tento typ implikátora je spojený so základnými operáciami t-normy a t-konormy.
+
+2. **Implikátor Mamdaniho**: Je to populárny typ implikátora, ktorý sa používa v systémoch založených na fuzzy pravidlách. Jeho vzťah medzi hodnotami príslušnosti podmienky a záveru je definovaný ako minimum týchto hodnôt. Tento typ implikátora vyjadruje konzervatívny prístup a zabezpečuje, aby záver nebol vyjadrený príliš silno.
+
+3. **Implikátor Lukasiewicza**: Je to implikátor, ktorý vychádza z algebraickej štruktúry založenej na Lukasiewiczovej logike. Jeho vzťah medzi hodnotami príslušnosti podmienky a záveru je definovaný pomocou Lukasiewiczovej operácie s odrezaním, ktorá vzniká odrezaním záporných hodnôt. Tento typ implikátora je spojený so zoslabovaním hodnôt príslušnosti.
+
+4. **Implikátor Produktu**: Je to implikátor, ktorý vychádza z teórie spojitého množinového počtu. Jeho vzťah medzi hodnotami príslušnosti podmienky a záveru je definovaný ako súčin týchto hodnôt. Tento typ implikátora poskytuje silnú spojitosť a zvyčajne sa používa pri implementácii fuzzy regulátorov.
+
+Každý z týchto typov implikátorov má svoje vlastnosti a vplyv na inferenčný proces. Vo všeobecnosti je dôležité vybrať vhodný implikátor, ktorý bude zodpovedať konkrétnej aplikácii a dosiahne žiadané výsledky v rámci fuzzy logiky.
 
 ____
 
@@ -654,6 +696,48 @@ Ak platí "Ak A, potom B" a platí A, potom platí B.
 
 Modus tollens je princíp logického odvodzovania, ktorý umožňuje odvodiť negáciu predchádzajúceho výroku na základe jeho implikácie (podmienky) a negácie dôsledku. Tento princíp je založený na nasledujúcej štruktúre:
 Ak platí "Ak A, potom B" a platí negácia B, potom platí negácia A.
+
+#### Nikita's part:
+
+Modus ponens a modus tollens sú dva základné inferenčné vzorce v logike, ktoré sa využívajú aj v fuzzy logike. Tieto metódy umožňujú odvodiť závery z daných podmienok a pravidiel.
+
+1. **Modus ponens**:
+Modus ponens je inferenčný vzorec, ktorý sa používa na odvodzovanie záverov v tvare "ak A, potom B". Má nasledovnú formu:
+
+Podmienka: Ak A, potom B.
+Fakt: A je pravdivé.
+
+Na základe tejto formy a pravidiel fuzzy logiky sa potom odvodí záver, že B je pravdivé.
+
+Príklad:
+Podmienka: Ak teplota je vysoká, potom svetlo je zapnuté.
+Fakt: Teplota je vysoká.
+
+Z tohto vyplýva záver, že svetlo je zapnuté.
+
+2. **Modus tollens**:
+Modus tollens je inferenčný vzorec, ktorý sa používa na odvodzovanie záverov v tvare "ak A, potom B". Má nasledovnú formu:
+
+Podmienka: Ak A, potom B.
+Fakt: B nie je pravdivé.
+
+Na základe tejto formy a pravidiel fuzzy logiky sa potom odvodí záver, že A nie je pravdivé.
+
+Príklad:
+Podmienka: Ak teplota je vysoká, potom svetlo je zapnuté.
+Fakt: Svetlo nie je zapnuté.
+
+Z tohto vyplýva záver, že teplota nie je vysoká.
+
+Všeobecná forma modusu ponens a modusu tollens v rámci fuzzy logiky môže byť vyjadrená nasledovne:
+
+Modus ponens:
+IF (Príslušnosť(A) je vysoká) THEN (Príslušnosť(B) je vysoká).
+
+Modus tollens:
+IF (Príslušnosť(B) je nízka) THEN (Príslušnosť(A) je nízka).
+
+Tieto inferenčné vzorce sú dôležitými nástrojmi pre získanie záverov v fuzzy logike a umožňujú efektívne vyhodnocovanie pravidiel a podmienok.
 
 ____
 
@@ -680,6 +764,31 @@ Princíp metódy piatich najbližších susedov spočíva v tom, že pre daný v
 - Pre každého z týchto najbližších susedov sa zistí trieda (pre klasifikáciu) alebo hodnota (pre regresiu).
 
 - Na základe tried alebo hodnôt týchto najbližších susedov sa rozhodne o triede alebo hodnote vstupného vzoru. Napríklad, v prípade klasifikácie môže sa použiť hlasovanie väčšiny, kde trieda s najväčším počtom najbližších susedov je priradená k vstupnému vzoru.
+
+#### Nikita's part:
+
+Relácie podobnosti a metóda piatich najbližších susedov sú dôležité nástroje v oblasti analýzy dát a vzorového rozpoznávania. Pomáhajú identifikovať a porovnávať podobnosti medzi objektmi alebo vzormi na základe ich atribútov alebo vlastností.
+
+**Relácia podobnosti**:
+Relácia podobnosti je matematický nástroj, ktorý meria stupeň podobnosti medzi dvoma objektmi alebo vzormi. Základným cieľom relácie podobnosti je kvantifikovať mieru podobnosti medzi dvojicami objektov. Existuje viacero metód na výpočet relácie podobnosti, vrátane vzdialenostných metrík (napr. Euklidovská vzdialenosť, Manhattanovská vzdialenosť), korelačných metód a podobne.
+
+**Metóda piatich najbližších susedov**:
+Metóda piatich najbližších susedov (K-nearest neighbors, K-NN) je jednou z najjednoduchších a najpoužívanejších metód v rámci relácií podobnosti. Táto metóda slúži na klasifikáciu alebo regresiu vstupných vzorov na základe ich podobnosti s inými známymi vzormi v trénovacej množine dát.
+
+Princíp metódy piatich najbližších susedov je nasledovný:
+
+1. **Trénovacia fáza**: Na začiatku sa získa trénovacia množina dát obsahujúca vzory s príslušnými triedami alebo hodnotami atribútov.
+
+2. **Výpočet podobnosti**: Pre neznámy vzor sa vypočíta jeho podobnosť s každým vzorom v trénovacej množine pomocou relácie podobnosti (napr. vzdialenostná metrika).
+
+3. **Výber najbližších susedov**: Vyberú sa K najbližších susedov neznámeho vzoru na základe ich najnižšej vzdialenosti alebo podobnosti.
+
+4. **Klasifikácia alebo regresia**: Na základe tried alebo hodnôt atribútov vybraných K najbližších susedov sa rozhodne o triede alebo hodnote atribútu neznámeho vzoru. To znamená, že sa pre neho určí trieda (v prípade klasifikácie) alebo predpovedá hodnota atribútu (v prípade regresie) na základe väčšiny alebo priemeru tried alebo hodnôt atribútov týchto susedov.
+
+Metóda piatich najbližších susedov je veľmi jednoduchá a intuitívna, avšak jej úspešnosť závisí od vhodného výberu parametra K (počet najbližších susedov) a vhodnej relácie podobnosti pre danú úlohu.
+
+Týmto spôsobom sa relácie podobnosti a metóda piatich najbližších susedov stávajú dôležitými nástrojmi pri analýze a spracovaní dát, vzorovom rozpoznávaní, klasifikácii a regresii. Ich vhodná implementácia a použitie môže priniesť cenné výsledky a informácie v mnohých oblastiach, vrátane strojového učenia, inteligentných systémov, bioinformatiky a ďalších.
+
 ____
 
 - ## 25. Hranové operátory – použitie, základné typy hranových operácií.
@@ -694,6 +803,27 @@ Hranové operátory sa používajú v rôznych oblastiach, ako je spracovanie ob
 #### Typy modifikačných funkcií $`f_H`$:
 ![Lectures - 2023_Страница_158](https://github.com/girgibon/fuzzy-logic/assets/93397589/bf83bec3-84aa-4c8d-b35a-ac768b1663f6)
 ![Lectures - 2023_Страница_159](https://github.com/girgibon/fuzzy-logic/assets/93397589/d89eaefd-8a90-4f8c-854d-365d83cff916)
+
+Hranové operátory sú matematické nástroje, ktoré sa používajú na detekciu hraníc alebo prechodov medzi rôznymi hodnotami v obrazovom spracovaní a analýze dát. Ich hlavným účelom je zvýrazniť a extrahovať obrysy, hrany alebo prechody v dátach.
+
+Existuje niekoľko základných typov hranových operátorov, ktoré sa používajú v rôznych aplikáciách:
+
+1. **Gradientové operátory**:
+Gradientové operátory využívajú gradienty (smer a veľkosť zmien) hodnôt dát na detekciu hraníc. Medzi najznámejšie gradientové operátory patrí Sobelov operátor, Prewittov operátor a Robertsův operátor.
+
+2. **Laplaceov operátor**:
+Laplaceov operátor je druhým derivovaným operátorom a používa sa na detekciu hrán založených na zmenách intenzity dát. Tento operátor sa často používa na detekciu hrán vo viacdimenzionálnych dátach. Medzi populárne Laplaceove operátory patria Laplaceov operátor s jedným členom a Laplaceov operátor s dvojitým členom.
+
+3. **Cannyho detektor hrán**:
+Cannyho detektor hrán je sofistikovaný hranový operátor, ktorý kombinuje viacero krokov na detekciu a extrakciu hrán. Jeho postup zahŕňa vyhladenie dát pomocou Gaussovej masky, výpočet gradientu, potlačenie nepodstatných hrán a konečnú detekciu hrán pomocou prahovania s histerezou.
+
+4. **Marr-Hildrethov detektor hrán**:
+Marr-Hildrethov detektor hrán je založený na detekcii hrán pomocou Laplaceovho operátora a následnom vyhladení hrán pomocou Gaussovej masky. Táto metóda umožňuje získať hladšie hrany a zároveň redukuje vplyv šumu.
+
+5. **Prahovanie s histerezou**:
+Prahovanie s histerezou je metóda, ktorá sa často používa v kombinácii s inými hranovými operátormi. Táto metóda umožňuje stanoviť prahové hodnoty, ktoré určujú, či sa daná hodnota považuje za hranu alebo nie. Prahovanie s histerezou umožňuje zachovať a spojiť diskrétne hrany v súvislých hraniach.
+
+Hranové operátory majú široké uplatnenie v rôznych oblastiach, vrátane obrazového spracovania, strojového videnia, analýzy dát, rozpoznávania vzorov a mnoho ďalších. Ich správne použitie a vhodná voľba operátora závisí od konkrétnej úlohy a charakteru dát, na ktorých sa pracuje.
 
 ____
 
@@ -713,6 +843,23 @@ Baldwinov systém má niekoľko vlastností, medzi ktoré patria:
 - **Axiómy a odvodzovacie pravidlá:** Systém definuje základné axiómy, ktoré sú východiskom pre odvodenie pravdivostných hodnôt výrokových formúlí. Okrem axiómov systém poskytuje aj odvodzovacie pravidlá, ktoré sa používajú na postupné odvodenie pravdivostných hodnôt.
 - **Pravidlá inferencie:** Baldwinov systém poskytuje pravidlá inferencie, ktoré umožňujú vyvodzovanie pravdivostných hodnôt výrokových formúlí na základe existujúcich pravdivostných hodnôt a logických operácií.
 
+#### Nikitas part:
+Baldwinov systém je jedným zo systémov pravdivostných hodnôt, ktorý bol navrhnutý ako alternatíva k tradičným dvohodnotovým systémom pravdivostných hodnôt (ako napríklad systém Booleovej algebry). Tento systém bol vyvinutý Richardom Baldwinom na začiatku 90. rokov ako rozšírenie klasickej logiky s cieľom lepšie zachytiť neurčitosť a nepresnosti v reálnom svete.
+
+Baldwinov systém je založený na trojhodnotovej logike, čo znamená, že premenné môžu nadobúdať tri hodnoty: pravda (T), nepravda (F) a neurčito (U). Neurčitá hodnota U sa používa na reprezentáciu neistoty, nepresnosti alebo nedostatočných informácií v systéme. Tento systém umožňuje vyjadriť nejasné a nepresné koncepty, ktoré sa často vyskytujú v reálnych situáciách.
+
+Baldwinov systém definuje základné operácie, ktoré umožňujú manipuláciu s trojhodnotovými premennými. Medzi tieto operácie patria:
+
+1. **Konjunkcia (AND)**: Konjunkcia troch hodnôt (T, U, F) je definovaná ako T AND X = X, U AND X = U a F AND X = F, kde X je ľubovoľná hodnota.
+
+2. **Disjunkcia (OR)**: Disjunkcia troch hodnôt (T, U, F) je definovaná ako T OR X = T, U OR X = U a F OR X = X, kde X je ľubovoľná hodnota.
+
+3. **Negácia (NOT)**: Negácia hodnôt T, U a F je definovaná ako NOT T = F, NOT U = U a NOT F = T.
+
+Okrem týchto základných operácií Baldwinov systém poskytuje aj ďalšie pravidlá pre manipuláciu s trojhodnotovými premennými, ako napríklad pravidlá pre inferenciu a riešenie nejasností v systéme.
+
+Baldwinov systém sa používa v rôznych oblastiach, ako je umelá inteligencia, rozpoznávanie vzorov, expertné systémy a spracovanie neurčitej a nepresnej informácie. Jeho prínosom je schopnosť zachytiť neurčitosť a nepresnosti v reálnom svete a umožniť ich efektívne spracovanie a reprezentáciu.
+
 ____
 
 - ## 27. Multidimenzionálne uvažovanie – prehľad. Mizumotov prístup.
@@ -725,6 +872,20 @@ Multidimenzionálne uvažovanie je prístup v analýze dát, ktorý sa zameriava
 ![Lectures - 2023_Страница_164](https://github.com/girgibon/fuzzy-logic/assets/93397589/daed3dd1-65f2-444d-9dbf-3430e5828fcf)
 #### Mizumotov prístup
 V rámci multidimenzionálneho uvažovania existuje viacero prístupov a metód. Jedným z týchto prístupov je Mizumotov prístup, ktorý je založený na princípe "Stromového zobrazenia" (Tree Map). Mizumotov prístup kombinuje hierarchickú štruktúru dát s vizuálnou reprezentáciou, čo umožňuje zobraziť a analyzovať viacero dimenzií dát naraz.
+
+#### Nikitas part:
+
+Multidimenzionálne uvažovanie je prístup v oblasti umelého a kognitívneho videnia, ktorý sa zameriava na analýzu a spracovanie viacrozmerných dát a informácií. Tento prístup umožňuje riešiť komplexné problémy a získavať bohatšie a podrobnejšie informácie z viacerých dimenzií.
+
+Mizumotov prístup je jedným z prístupov k multidimenzionálnemu uvažovaniu. Tento prístup je založený na predpoklade, že získanie viacrozmerných informácií zabezpečuje vytvorenie podrobnejšieho a komplexnejšieho obrazu o spracovávaných dátach.
+
+Mizumotov prístup zdôrazňuje dôležitosť zohľadňovania rôznych dimenzií a aspektov v analýze a spracovaní dát. Neobmedzuje sa na tradičné jednorozmerné alebo dvojrozmerné prístupy, ale sa snaží zahrnúť a využiť všetky dostupné dimenzie a informácie.
+
+Pri mizumotovom prístupe sa využívajú rôzne techniky a metódy na spracovanie viacrozmerných dát, vrátane štatistických analýz, strojového učenia, fuzzy logiky a iných. Tieto techniky sa aplikujú na rôzne oblasti, ako je obrazové spracovanie, analýza biomedicínskych dát, predikcia, rozhodovanie a mnoho ďalších.
+
+Výhodou mizumotového prístupu je jeho schopnosť zachytiť a využiť komplexné vzťahy a vzorce v dátach, ktoré by mohli byť prehliadané v tradičných prístupoch. Tento prístup umožňuje lepšie porozumenie a interpretáciu dát z viacerých perspektív a dimenzií, čo vedie k vylepšeným výsledkom a rozhodnutiam.
+
+Mizumotov prístup je stále aktívnym výskumným témou a je aplikovaný v mnohých oblastiach. Vývoj nových metód a techník na spracovanie viacrozmerných dát a rozšírenie multidimenzionálneho uvažovania prispeje k ďalšiemu pokroku v analyzovaní a porozumení zložitých informácií a vzorov v dátach.
 
 ____
 
@@ -740,6 +901,36 @@ Zhluková analýza je metóda v analýze dát, ktorá sa používa na identifik�
 - **Prieskum dát:** V oblasti prieskumu dát je zhluková analýza dôležitým nástrojom pre objavovanie vzorov, štruktúr a skupín v rozsiahlych dátových súboroch. Pomáha v identifikácii vzťahov a vytváraní hypotéz, ktoré môžu byť neskôr testované.
 - **Obchodná analýza:** Pri analýze predaja, spotrebiteľského správania alebo logistických dát sa zhluková analýza používa na identifikáciu skupín podobných výrobkov, spotrebiteľských skupín alebo distribučných vzorov. Tieto informácie môžu byť využité na optimalizáciu skladových zásob, zlepšenie predaja alebo personalizované odporúčania pre zákazníkov.
 - **Astronómia a geoinformatika:** V týchto oblastiach sa zhluková analýza využíva na identifikáciu galaxií, hviezdnych zhlukov, priestorových vzorov alebo klasifikáciu geografických údajov.
+
+#### Nikitas part:
+
+Zhluková analýza je metóda v oblasti analýzy dát, ktorá sa používa na identifikáciu podobných skupín alebo zhlukov v sade dát. Cieľom zhlukovej analýzy je rozdeliť dáta do homogénnych skupín na základe ich podobnosti, pričom členovia v rámci jedného zhluku by mali byť si podobnejší ako členovia v iných zhlukoch. Táto metóda umožňuje identifikovať skryté vzory a štruktúru v dátach, čo je užitočné pri objavovaní informácií, segmentácii zákazníkov, rozpoznávaní vzorov a mnohých ďalších aplikáciách.
+
+Proces zhlukovej analýzy sa zvyčajne skladá z nasledujúcich krokov:
+
+1. **Výber atribútov**: Vyberú sa atribúty alebo premenné, ktoré budú použité pri analýze a ktoré by mali byť relevantné pre identifikáciu podobnosti a zhlukov.
+
+2. **Výber metódy zhlukovania**: Existuje mnoho rôznych metód zhlukovania, ako napríklad k-means, hierarchické zhlukovanie, fuzzy c-means, DBSCAN a mnohé ďalšie. Každá metóda má svoje vlastnosti a výhody a vyberá sa na základe charakteru dát a cieľa analýzy.
+
+3. **Určenie počtu zhlukov**: Je potrebné určiť počet zhlukov, do ktorých sa majú dáta rozdeliť. Tento krok môže byť kritický, pretože správny počet zhlukov by mal zohľadňovať štruktúru dát a cieľ analýzy.
+
+4. **Výpočet podobnosti**: Na základe vybraných atribútov sa vypočíta miera podobnosti medzi jednotlivými dátovými bodmi. Existuje mnoho metrík podobnosti, ako je Euklidovská vzdialenosť, Manhattan vzdialenosť, korelačný koeficient a podobne.
+
+5. **Zhlukovanie**: Dáta sa rozdelia do zhlukov na základe ich podobnosti. Každý zhluk obsahuje skupinu dátových bodov, ktoré majú medzi sebou veľkú mieru podobnosti.
+
+6. **Vyhodnotenie a interpretácia**: Zhluky sa vyhodnotia a interpretujú na základe cieľa analýzy a významu jednotlivých zhlukov. Tento krok zahŕňa vizualizáciu zhlukov, štatistickú analýzu a interpretáciu výsledkov.
+
+Zhluková analýza má široké využitie v rôznych oblastiach, vrátane:
+
+- **Marketing a segmentácia zákazníkov**: Pomáha identifikovať skupiny zákazníkov s podobnými preferenciami, správaním alebo charakteristikami, čo umožňuje cieliť marketingové kampane a personalizovať ponuku.
+
+- **Medicína a biomedicínske aplikácie**: Pomáha identifikovať podobné vzory chorôb, skupiny pacientov s rovnakými symptómami alebo genetickými vlastnosťami, čo môže pomôcť pri diagnostike a vývoji liečebných postupov.
+
+- **Obrazové spracovanie**: Pomáha identifikovať podobné obrazy, segmentovať objekty v obraze, rozpoznávať vzory alebo riešiť problémy v oblasti rozpoznávania tvárí.
+
+- **Priemyselná automatizácia a robotika**: Pomáha identifikovať skupiny podobných procesov alebo vzorov v dátach senzorov, čo umožňuje adaptáciu riadiacich systémov, plánovanie alebo rozpoznávanie vzorov.
+
+Zhluková analýza je dôležitou metódou v oblasti analýzy dát a umožňuje objavovať a využívať skryté vzory a informácie v sade dát. Rôzne metódy zhlukovania a techniky vykazujú rôzne výhody a obmedzenia a vyberajú sa na základe špecifických požiadaviek a charakteristík dátovej sady.
 
 ____
 
@@ -766,6 +957,19 @@ Základné typy miery neurčitosti sa môžu líšiť v spôsobe výpočtu a vla
 ![Lectures - 2023_Страница_201](https://github.com/girgibon/fuzzy-logic/assets/93397589/60da53c2-dbd3-4ca4-8cbe-b33cb981e211)
 ![Lectures - 2023_Страница_202](https://github.com/girgibon/fuzzy-logic/assets/93397589/0066975d-579a-4587-95e4-2bed296403ea)
 
+#### Nikitas part:
+Mierou neurčitosti fuzzy množín je kvantitatívna hodnota, ktorá vyjadruje stupeň neurčitosti alebo rozptylu hodnôt v rámci fuzzy množiny. Tieto miery sú dôležité pri hodnotení a charakterizácii fuzzy množín a slúžia na kvantifikáciu ich neurčitosti. Existuje niekoľko základných mier neurčitosti, ktoré sa používajú v teórii fuzzy množín. Tu popíšeme niektoré z týchto mier a ich vlastnosti.
+
+1. **Entropia**: Entropia je mierou neurčitosti, ktorá vyjadruje mieru chaosu alebo rozptylu hodnôt v rámci fuzzy množiny. Vyššia hodnota entropie znamená väčšiu neurčitosť. Entropia sa vypočíta ako súčet významnosti jednotlivých hodnôt fuzzy množiny, násobených logaritmom týchto hodnôt. Vlastnosti entropie zahŕňajú non-negativitu, monotónnosť a maximálnu hodnotu, ktorá je dosiahnutá, keď je množina rovnomerne rozdelená.
+
+2. **Neurčitosť (Uncertainty)**: Neurčitosť je mierou neurčitosti, ktorá vyjadruje stupeň neurčitosti v rámci fuzzy množiny. Vypočíta sa ako súčet štvorcov významnosti jednotlivých hodnôt fuzzy množiny. Vlastnosti neurčitosti zahŕňajú non-negativitu a maximálnu hodnotu, ktorá je dosiahnutá, keď je množina rovnomerne rozdelená.
+
+3. **Variabilita (Variability)**: Variabilita je mierou neurčitosti, ktorá vyjadruje stupeň variabilít v rámci fuzzy množiny. Vypočíta sa ako súčet štvorcov významnosti jednotlivých hodnôt od ich priemeru. Vyššia hodnota variability znamená väčšiu neurčitosť. Vlastnosti variability zahŕňajú non-negativitu a maximálnu hodnotu, ktorá je dosiahnutá, keď sú všetky hodnoty rovnomerne vzdialené od priemeru.
+
+4. **Index rozostupu (Spread Index)**: Index rozostupu je mierou neurčitosti, ktorá vyjadruje mieru rozptýlenia hodnôt v rámci fuzzy množiny. Vypočíta sa ako súčet absolútnych hodnôt rozdielov medzi jednotlivými hodnotami a ich priemerom. Vyššia hodnota indexu rozostupu znamená väčšiu neurčitosť. Vlastnosti indexu rozostupu zahŕňajú non-negativitu a maximálnu hodnotu, ktorá je dosiahnutá, keď sú všetky hodnoty rovnomerne rozmiestnené okolo priemeru.
+
+Tieto mery neurčitosti sú užitočné pri kvantifikácii neurčitosti fuzzy množín a môžu sa používať na porovnávanie a charakterizáciu rôznych fuzzy množín. Výber konkrétnej miery závisí od konkrétneho kontextu a požiadaviek aplikácie.
+
 ____
 
 - ## 30. Fuzzy množiny typu 2 – definícia a využitie v regulácii.
@@ -778,6 +982,18 @@ Fuzzy množiny typu 2 sú rozšírením klasických fuzzy množín typu 1 a umo�
 #### Využitie v regulácii
 Pre využitie fuzzy množín typu 2 v regulácii je potrebné implementovať algoritmy a metódy, ktoré sú schopné pracovať s týmito rozšírenými množinami. Jedným z takýchto algoritmov je napríklad adaptívna inferencia, ktorá dokáže efektívne kombinovať informáciu z rôznych zdrojov a adaptovať sa na meniace sa podmienky. Tento typ regulácie je vhodný pre systémy s vysokou neistotou a nestabilitou.
 ![Lectures - 2023_Страница_207](https://github.com/girgibon/fuzzy-logic/assets/93397589/efa5e73a-17a0-4f55-b185-aca69c8805ab)
+
+#### Nikitas part:
+
+Fuzzy množiny typu 2 sú rozšírením klasických fuzzy množín a umožňujú zohľadniť ďalší stupeň neurčitosti a viacero úrovní príslušnosti. V klasických fuzzy množinách je príslušnosť prvku určená jednou hodnotou v intervale [0, 1], čo vyjadruje stupeň príslušnosti k danej množine. Naopak, fuzzy množiny typu 2 umožňujú príslušnosť prvku vyjadriť ako funkciu, ktorá sa mení v priebehu intervalu [0, 1]. Tento prístup umožňuje zohľadniť viacero úrovní neurčitosti a podrobnejšie vyjadriť rozpätie príslušnosti k množine.
+
+Využitie fuzzy množín typu 2 je často spojené s oblasťou regulácie. Vo fuzzy regulácii sa zvyčajne pracuje s príznakovými premennými, ktoré sú fuzzy množinami typu 2. Príkladom môže byť regulácia teploty v miestnosti. V klasickom prístupe by sa pracovalo s príznakovými premennými ako "studené", "ideálna teplota", "horúce" a každej by sa priradila jedna hodnota príslušnosti. V prípade fuzzy množín typu 2 by sa však každej príznakovej premennej priradila funkcia, ktorá vyjadruje rôzne úrovne neurčitosti v priebehu intervalu. To umožňuje presnejšie modelovanie a lepšie zohľadnenie neurčitosti a zmeny podmienok.
+
+V regulácii sa využívajú rôzne metódy a algoritmy na prácu s fuzzy množinami typu 2, vrátane inferenčných systémov, adaptívnych metód a algoritmov učenia. Cieľom je dosiahnuť presnejšiu a robustnejšiu reguláciu v prítomnosti viacerých úrovní neurčitosti a zmeny podmienok.
+
+Využitie fuzzy množín typu 2 v regulácii má viaceré výhody, vrátane schopnosti zohľadniť viacero úrovní neurčitosti, vyjadriť variabilitu a zmeny podmienok, a umožniť adaptáciu a učenie sa z prostredia. Avšak, implementácia a analýza fuzzy množín typu 2 je náročnejšia ako v prípade klasických fuzzy množín, a vyžaduje vhodné matematické nástroje a algoritmy pre prácu s takouto rozšírenou formou fuzzy množín.
+
+Celkovo možno povedať, že fuzzy množiny typu 2 sú užitočným nástrojom v oblasti regulácie, kde je potrebné zohľadniť viaceré úrovne neurčitosti a presnejšie modelovať a riadiť systémy v zložitých a dynamických prostrediach.
 
 ____
 
